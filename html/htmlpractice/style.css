@@ -1,0 +1,40 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+#nav{
+    color: blue;
+    width: 500px;
+    padding: 10px;
+}
+.navbar{
+    background-color: aqua;
+}
+#nav #sur{
+    text-align: center;
+}
+#raj{
+    background-color: brown;
+    margin: 100px;
+}
+.btn{
+    background-color: black;
+    color: azure;
+    padding: 10px;
+}
+.btn:hover ~#wel{
+    display: block;
+    transition: 0.5s ease;
+}
+#wel{
+    background-color: blue;
+    padding: 20px;
+    margin: 20px;
+    border: 10px solid black;
+    border-radius: 1em;
+    cursor: pointer;
+    display: none;
+}

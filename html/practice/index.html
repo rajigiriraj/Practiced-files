@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="refresh" content="3"> -->
+    <title>Document</title>
+    <style>
+        article p:first-of-type{
+            color: red;
+        }
+        
+        #first, #second{
+            background-color: red;
+            height: 4em;
+            width: 6em;
+            margin: 10px;
+            padding: 10px;
+            border:2px solid black;
+            transform: rotate(45deg);
+            position: relative;
+            top: 20px;
+            right: 0;
+        }
+        #second{
+            transform: skew(45deg);
+            position:absolute;
+            top: 40px;
+            margin-left: 40px;
+        }
+        .hel{
+            border: 4px solid #ffff00;
+            height: 200px;
+            width: 300px;
+           background-color: black; 
+            padding: 5px 50px 50px 5px;
+            background-clip: content-box;
+            color: #ffff00;
+            margin-left: auto;
+            
+        }
+        .learn{
+            background-color: aqua;
+            display: block;
+        }
+        .box2{
+            height: 50px;
+            width: 50px;
+            background-color: #000;
+            color:white;
+            text-align: center;
+            animation: rotate;
+            animation-iteration-count: 3;
+            animation-duration: 3s;
+            animation-timing-function: linear;
+            margin-bottom: 30px;
+
+        }
+        @keyframes myanime{
+            from{margin-left:100%}
+            to{margin-left: 0%;}
+        }
+        @keyframes rotate{
+            10%{transform:rotate3d(10deg);}
+        }
+    </style>
+</head>
+<body>
+    <section class="box">
+        <div id="first">giri
+            <div id="second">raji</div>
+        </div>
+        
+    </section>
+    <div class="hel">hello all</div>
+    <span class="learn">giri</span>
+    <h1 style="text-shadow: 0px 5px 5px rgb(0, 208, 255),0px -5px 5px red;">floating</h1>
+    <h1 style="box-shadow: 0px 5px 5px green,0px -5px 5px orange;">andavaaaa</h1>
+    <p style="float: left;">9654321</p>
+    <p>1234567890</p>
+    <p style="clear: left;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo corrupti tempora repellat obcaecati minus adipisci in nisi nulla commodi consequatur minima, veniam a deleniti pariatur ex reiciendis omnis quia voluptatem.</p>
+    <h1 style="margin-right: auto;">hello</h1>
+    <article>
+        <p style="text-decoration: black wavy underline;">wertyuiasdfghjk</p>
+        <p style="border-style:outset; display: inline;" >asdfghjkzxcvbnm</p>
+    </article>
+        <p>hi im <span style="color:red">raji</span></p>
+    <select>
+        <option>choice1</option>
+        <option>choice 2</option>
+        <option>choice 3</option>
+    </select>
+    <samp>hello all</samp>
+    <del>no</del>
+    <ins>yes</ins>
+    <input type="color">
+    <h1>&lt;hi</h1>
+    <details>
+        <summary>hello</summary>
+    <p>sdfghjklerty&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;&copy;uicvbnmrtyuiocvbnm</p>
+    </details>
+    <input type="time">
+    <pre>
+        hello
+        hi
+    </pre>
+    
+    <div class="box2">box</div>
+
+    <canvas id="canva" width="200" height="200" style="border:1px solid #000000;"></canvas>
+    <aside>asdfghjklertyuio</aside>
+    <progress value="25" max="100"></progress>
+     <button>submit it</button>
+     <div class="test"></div>
+     <script src=""></script>
+     <ol>
+        <li id="raji"></li>
+     </ol>
+     <ul>
+        <li class="gut"></li>
+     </ul>
+     ul>li.test*5
+     <ul>
+        <li class="test"></li>
+        <li class="test"></li>
+        <li class="test"></li>
+        <li class="test"></li>
+        <li class="test"></li>
+     </ul>
+     ul>.test$*3
+     <ul>
+        <li class="test1"></li>
+        <li class="test2"></li>
+        <li class="test3"></li>
+     </ul>
+        ul.list>li.items>span.micro>p.para
+
+        <ul class="list">
+            <li class="item">
+                <span class="micro">
+                    <p class="para"></p>
+                </span>
+            </li>
+        </ul>   
+        (section.para>(div.inside>p.test$*3))+footer>p{the end}
+
+        <section class="para">
+            <div class="inside">
+                <p class="test1"></p>
+                <p class="test2"></p>
+                <p class="test3"></p>
+            </div>
+        </section>
+
+        <input type="radio" name="gender">male
+        <input type="radio" name="gender">female
+        <input type="file">
+        <input type="search">
+        <input type="range" max="100" min="1" value="20" step="30">
+        <footer>
+            <p>the end</p>
+        </footer>
+        <iframe src="https://codedamn.com" frameborder="0"></iframe>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var can= document.getElementById("canva");
+                var cs=can.getContext("2d");
+                console.log('Canvas context:', cs); 
+                cs.globalAlpha = 1;
+                cs.fillStyle = "#00FF00";
+                cs.fillRect(0, 0, 200, 100);
+            });
+            
+        </script>
+</body>
+</html>

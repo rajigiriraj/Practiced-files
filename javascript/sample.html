@@ -1,0 +1,22 @@
+<input id="ip">
+<button onclick="change()">Add</button>
+<ul id="list">
+    <li>hello
+        <button onclick="del(event)">delete</button>
+    </li>
+</ul>
+<script>
+    var input=document.getElementById("ip")
+    var listvar=document.getElementById("list")
+    console.log("hello")
+    function change(){
+        var text=input.value
+        var item=document.createElement("li")
+        item.innerHTML=text +"<button onclick='del(event)'>delete</button>"
+        listvar.append(item)
+    }
+    function del(event){
+        event.target.parentElement.remove()
+        console.log(event)
+    }
+</script>

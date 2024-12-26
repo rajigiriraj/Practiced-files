@@ -1,0 +1,18 @@
+<p class="one">
+    hello
+</p>
+<div id="space"></div>
+<button onclick="click()">change</button>
+<script>
+    var a=document.querySelector(".one")
+    var create=document.getElementById("space");
+    var h=document.createElement("h1")
+    console.log(create)
+    create.append(h);
+    // 
+    console.log(a)
+    console.log( a.textContent);
+    function click(){
+        a.textContent="bi";
+    }
+</script>

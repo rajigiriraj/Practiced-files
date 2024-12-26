@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superwars</title>
+    <style>
+        #container{
+            height: 600px;
+            width: 80%;
+            box-shadow: 0px 0px 15px #c2bfbf;
+            margin-top: 60px;
+            margin-left: 10%;
+            padding-left: 40px;
+            padding-top: 1%;
+            padding-bottom: 1%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .player{
+            height: auto;
+            width: 15%;
+            align-items: center;
+            text-align: center;
+            margin: 0px 15px 15px 0px;
+            padding: 20px 15px 0 15px;
+            border: 2px solid #c2bfbf;
+            border-radius: 5px;
+        }
+        #heroes{
+            display: flex;
+            flex-wrap: wrap;
+            width: 40%;
+        }
+        #villains{
+            display: flex;
+            flex-wrap: wrap;
+            width: 40%;
+            margin-left: 10%;
+        }
+        .player img {
+            height: auto; 
+            width: 100%;  
+            object-fit: cover; 
+            border-radius: 5px; 
+        }
+        .player .name{
+            font-size: 10px;
+        }
+        .player .strength{
+            font-size: 25px;
+        }
+        @media screen and (max-width:700px){
+            .player{
+                height: 15%;
+                width: 15%;
+                margin: 0px 7px 0px 0px;
+            }
+            #heroes{
+                width: 45%;
+            }
+            #villains{
+                width: 45%;
+                margin-left: 5%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section id="container">
+        <div id="heroes"></div>
+        <div id="villains"></div>
+    </section>
+    
+
+    <script>
+        const PLAYERS = [
+            "Spiderman",
+            "Captain America",
+            "Wonderwoman",
+            "Popcorn",
+            "Gemwoman",
+            "Bolt",
+            "Antwoman",
+            "Mask",
+            "Tiger",
+            "Captain",
+            "Catwoman",
+            "Fish",
+            "Hulk",
+            "Ninja",
+            "Black Cat",
+            "Volverine",
+            "Thor",
+            "Slayer",
+            "Vader",
+            "Slingo"
+        ];
+
+        const initPlayers = (players) => {
+            let detailedPlayers = [];
+            players.forEach((item,index)=>{
+                detailedPlayers.push({
+                    name: item,
+                    strength: getRandomStrength(), 
+                    img: `assets/super-${index + 1}.png`,
+                    type: index % 2 === 0 ? "hero" : "villain" 
+                });
+            });
+            return detailedPlayers;
+        };
+
+        const getRandomStrength = () => {
+            return Math.ceil(Math.random() * 100);
+        };
+
+        const buildPlayers = (players, type) => {
+            let fragment = '';
+            players.forEach(player => {
+                if (player.type === type) {
+                    fragment += `
+                        <div class="player">
+                            <img src="${player.img}" alt="${player.name}">
+                            <div class="name">${player.name}</div>
+                            <div class="strength">${player.strength}</div>
+                        </div>
+                    `;
+                }
+            });
+            return fragment;
+        };
+
+        const viewPlayers = (players) => {
+            document.getElementById('heroes').innerHTML = buildPlayers(players, 'hero');
+            document.getElementById('villains').innerHTML = buildPlayers(players, 'villain');
+        };
+
+        window.onload = () => {
+            const players = initPlayers(PLAYERS);
+            viewPlayers(players);
+        };
+
+    </script>
+    
+</body>
+</html>

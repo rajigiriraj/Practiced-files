@@ -1,0 +1,11 @@
+#container1 h1{
+    text-align: center;
+}
+#container1 .list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.list{
+    text-decoration: none;
+}
